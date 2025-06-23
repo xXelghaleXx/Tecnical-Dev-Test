@@ -25,9 +25,21 @@ app.use(session({
     cookie: { secure: false, maxAge: 24 * 60 * 60 * 1000 } // 24 horas
 }));
 
+app.use(cors({
+    origin: [
+        'http://localhost:5173', 
+        'http://127.0.0.1:5173', 
+        'http://192.168.18.94:3000',  // Tu IP
+        '*'  // Permitir todas (solo para desarrollo)
+    ],
+    credentials: true,
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+}));
+
 // Middleware
 app.use(cors({
-    origin: ['http://localhost:5173', 'http://127.0.0.1:5173'],
+    origin: ['http://localhost:5132/', 'http://127.0.0.1:5173'],
     credentials: true
 }));
 app.use(express.json());
