@@ -29,19 +29,25 @@ app.use(cors({
     origin: [
         'http://localhost:5173', 
         'http://127.0.0.1:5173', 
-        'http://192.168.18.94:3000',  // Tu IP
-        'http://localhost:3000',      // Puerto de tu API
-        'http://127.0.0.1:3000',      // Localhost API
-        'http://localhost:3001',      // Flutter Web puerto común
-        'http://127.0.0.1:3001',      // Flutter Web localhost
-        'http://localhost:8080',      // Flutter Web puerto alternativo
-        'http://127.0.0.1:8080',      // Flutter Web localhost alternativo
-        'http://localhost:8000',      // Otro puerto común
-        'http://127.0.0.1:8000',      // Otro puerto localhost
-        'http://192.168.18.94:3001',  // Tu IP con Flutter Web
-        'http://192.168.18.94:8080',  // Tu IP con puerto alternativo
-        'http://192.168.18.94:8000',  // Tu IP con otro puerto
-        '*'  // Permitir todas (solo para desarrollo)
+        'http://192.168.18.10:3000',  // Tu IP ACTUAL
+        'http://192.168.18.10:8080',  // Tu IP ACTUAL con Flutter
+        'http://192.168.18.94:3000',  // IP antigua (mantener por compatibilidad)
+        'http://localhost:3000',      
+        'http://127.0.0.1:3000',      
+        'http://localhost:3001',      
+        'http://127.0.0.1:3001',      
+        'http://localhost:8080',      
+        'http://127.0.0.1:8080',      
+        'http://localhost:8000',      
+        'http://127.0.0.1:8000',      
+        'http://192.168.18.10:3001',  // NUEVA IP
+        'http://192.168.18.10:8000',  // NUEVA IP
+        'http://10.200.171.189:3000',
+        'http://10.200.171.189:3001',
+        'http://10.200.171.189:8080',
+        'http://10.200.172.168:3000',
+        'http://10.200.172.168:8080',
+        '*'  // Solo para desarrollo
     ],
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
